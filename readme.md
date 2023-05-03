@@ -13,7 +13,8 @@
 
 
 ###Create index old
-curl --location --request PUT 'http://localhost:9200/products' \
+
+```curl --location --request PUT 'http://localhost:9200/products' \
 --header 'Content-Type: text/plain' \
 --data '{
 "mappings": {
@@ -37,9 +38,10 @@ curl --location --request PUT 'http://localhost:9200/products' \
 }
 }
 '
+```
 
 ### Create document OLD
-curl --location 'http://localhost:9200/products/book' \
+```curl --location 'http://localhost:9200/products/book' \
 --header 'Content-Type: application/json' \
 --data '{
 "ISBN": "9781501173219",
@@ -56,10 +58,10 @@ curl --location 'http://localhost:9200/products/book' \
 "price": 9.99
 }
 '
-
+```
 
 ### Create mapping new 
-curl --location --request PUT 'http://localhost:9200/products' \
+```curl --location --request PUT 'http://localhost:9200/products' \
 --header 'Content-Type: application/json' \
 --data '{
 "mappings": {
@@ -86,11 +88,11 @@ curl --location --request PUT 'http://localhost:9200/products' \
 }
 }
 '
-
+```
 
 
 ### Create document New
-curl --location 'http://localhost:9200/products/_doc' \
+```curl --location 'http://localhost:9200/products/_doc' \
 --header 'Content-Type: application/json' \
 --data '{
 "ISBN": "9781501173265",
@@ -107,3 +109,4 @@ curl --location 'http://localhost:9200/products/_doc' \
 "price": 25.99
 }
 '
+```
